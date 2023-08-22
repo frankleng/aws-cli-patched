@@ -105,15 +105,6 @@ create_install_dir() {
 }
 
 check_preexisting_install() {
-  if [ -L "$CURRENT_INSTALL_DIR" ] && [ "$UPGRADE" = "no" ]
-  then
-    die "Found preexisting AWS CLI installation: $CURRENT_INSTALL_DIR. Please rerun install script with --update flag."
-  fi
-  if [ -d "$INSTALL_DIR" ]
-  then
-    echo "Found same AWS CLI version: $INSTALL_DIR. Skipping install."
-    exit 0
-  fi
 }
 
 setup_install_dist() {
