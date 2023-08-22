@@ -104,9 +104,6 @@ create_install_dir() {
   }
 }
 
-check_preexisting_install() {
-}
-
 setup_install_dist() {
   cp -r "$INSTALLER_DIST_DIR" "$INSTALL_DIST_DIR"
 }
@@ -136,7 +133,6 @@ die() {
 main() {
   parse_commandline "$@"
   set_global_vars
-  check_preexisting_install
   create_install_dir
   create_bin_symlinks
   echo "You can now run: $BIN_AWS_EXE --version"
