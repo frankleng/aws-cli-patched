@@ -110,8 +110,8 @@ setup_install_dist() {
 
 setup_install_bin() {
   mkdir -p "$INSTALL_BIN_DIR"
-  ln -s "../dist/$EXE_NAME" "$INSTALL_AWS_EXE"
-  ln -s "../dist/$COMPLETER_EXE_NAME" "$INSTALL_AWS_COMPLETER_EXE"
+  ln -sf "../dist/$EXE_NAME" "$INSTALL_AWS_EXE"
+  ln -sf "../dist/$COMPLETER_EXE_NAME" "$INSTALL_AWS_COMPLETER_EXE"
 }
 
 create_current_symlink() {
